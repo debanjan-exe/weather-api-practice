@@ -23,7 +23,7 @@ function App() {
       .then(data => {
         setWeather(data.data);
       })
-      .catch(err => console.log(err));
+      .catch(err => alert("Incorrect Input"));
   }
 
   return (
@@ -31,7 +31,7 @@ function App() {
       {weather && (
         <div className="app">
           <div>
-            <input onChange={weatherInput} type="text" />
+            <input onChange={weatherInput} type="text" id="myInput" />
             <button onClick={searchWeather}>Search</button>
           </div>
           <h1>{weather.location.country}</h1>
