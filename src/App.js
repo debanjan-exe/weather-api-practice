@@ -6,7 +6,7 @@ function App() {
   const [weather, setWeather] = useState(null)
   const [input, setInput] = useState("")
   useEffect(() => {
-    axios.get(`http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API}&q=Delhi&aqi=no`)
+    axios.get(`http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API}&q=Delhi&aqi=no/`)
       .then(data => {
         setWeather(data.data);
       })
@@ -19,7 +19,7 @@ function App() {
   }
 
   const searchWeather = () => {
-    axios.get(`http://api.weatherapi.com/v1/current.json?key=e4d324a6ff3445229f554012211509&q=${input}&aqi=no`)
+    axios.get(`http://api.weatherapi.com/v1/current.json?key=e4d324a6ff3445229f554012211509&q=${input}&aqi=no/`)
       .then(data => {
         setWeather(data.data);
       })
